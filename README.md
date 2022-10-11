@@ -17,8 +17,6 @@ Refer to https://nodemon.io for more details
 ```bash
 npm install forever -g
 ```
-Refer to https://pm2.keymetrics.io for more details
-
 ## Cloning and Running the Application in local
 
 Clone the project into local
