@@ -1,0 +1,317 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "NodeDemo",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001/api",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/users/register": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "register user",
+        "operationId": "register",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/registerUserRequest"
+                  },
+                  {
+                    "example": {
+                      "firstName": "sanjeet",
+                      "lastName": "kumar",
+                      "address": "New Delhi",
+                      "phone": "9999999999",
+                      "email": "sanjeet.kumar@gmail.com",
+                      "password": "1234"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "firstName": "sanjeet",
+                "lastName": "kumar",
+                "address": "New Delhi",
+                "phone": "9999999999",
+                "email": "sanjeet.kumar@gmail.com",
+                "password": "1234"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "localhost:3001/api/users/login",
+        "operationId": "localhost:3001/api/users/login",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/loginRequest"
+                  },
+                  {
+                    "example": {
+                      "email": "sanjeet.kumar@gmail.com",
+                      "password": "1234"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "email": "sanjeet.kumar@gmail.com",
+                "password": "1234"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "localhost:3001/api/users",
+        "operationId": "localhost:3001/api/users",
+        "parameters": [
+          {
+            "name": "auth-token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZmlyc3ROYW1lIjoic2FuamVldCIsImxhc3ROYW1lIjoia3VtYXIiLCJhZGRyZXNzIjoiTmV3IERlbGhpIiwicGhvbmUiOiI5OTk5OTk5OTk5IiwiZW1haWwiOiJzYW5qZWV0Lmt1bWFyQHRpY2tldG1hc3Rlci5jb20iLCJwYXNzd29yZCI6IjgxZGM5YmRiNTJkMDRkYzIwMDM2ZGJkODMxM2VkMDU1IiwiaWF0IjoxNjY1NDk0MTgyLCJleHAiOjE2NjU0OTU5ODJ9.0rkIKvRCNrmb92K7bgz2nBWr6wH7lrU0uKiGNPMZg5TSpEnzFEY3ZkLUagBP5GSCuWM-ljbSRYByd83kaRDbIncN2tQb-ZuSGbs7dFSM7b0C9YFRQ4vYE8JLFZqH3pE_Sv93y9xJJpSo0D0BWQVXQbCtWhswuzbKN33m07uOMbOGYBG67MX0lTft4mauNEIfHdeDrWPyjMnI-4q0-QgUPMNfu4TsQi43wKgfHNB9FWtxWcRYTufey56nP26uycdTwV77sGaY_1Ty-24v1dKMnEbeQdvIuW_G-S5UY2GDpf7GSjp2q-jeP8HmgjpZEmrKfxD69b3yTSOB4rKJ2NVp5nIplLodL_MoTXJsdnsShFibE73RFiQhAdewLkfOM79FIkgWKHNGI_kh1Y1pV_A7sa2VYkEdYcn3EWk8JfuKZy0ZUTBI0Lc9X6yWx4YxezAVODIMzL0fbd0o4Py6ZJ2k-3mP_P-WRoG7IrCA9dzfob1pGM4X-JI4PAawJzthXHC-cB3gk-VBYujl8ZBBpk6OMDLqHC1O4YHVU_6cnl1ez3n0PMBEQW0QdloVtRora9lWDrGCGX4PQYPDv4LKF4zKcoMPb60bFQmRNP4KmSk8taQDCk7R3e1lUiKREKgyPi7QBlN5j9I0WNHbDWI6GD7TgCSt9KwGJsf14OTLU4pfnac"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/users/8": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "localhost:3001/api/users/8",
+        "operationId": "localhost:3001/api/users/8",
+        "parameters": [
+          {
+            "name": "auth-token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZmlyc3ROYW1lIjoic2FuamVldCIsImxhc3ROYW1lIjoia3VtYXIiLCJhZGRyZXNzIjoiTmV3IERlbGhpIiwicGhvbmUiOiI5OTk5OTk5OTk5IiwiZW1haWwiOiJzYW5qZWV0Lmt1bWFyQHRpY2tldG1hc3Rlci5jb20iLCJwYXNzd29yZCI6IjgxZGM5YmRiNTJkMDRkYzIwMDM2ZGJkODMxM2VkMDU1IiwiaWF0IjoxNjY1NDk0MTgyLCJleHAiOjE2NjU0OTU5ODJ9.0rkIKvRCNrmb92K7bgz2nBWr6wH7lrU0uKiGNPMZg5TSpEnzFEY3ZkLUagBP5GSCuWM-ljbSRYByd83kaRDbIncN2tQb-ZuSGbs7dFSM7b0C9YFRQ4vYE8JLFZqH3pE_Sv93y9xJJpSo0D0BWQVXQbCtWhswuzbKN33m07uOMbOGYBG67MX0lTft4mauNEIfHdeDrWPyjMnI-4q0-QgUPMNfu4TsQi43wKgfHNB9FWtxWcRYTufey56nP26uycdTwV77sGaY_1Ty-24v1dKMnEbeQdvIuW_G-S5UY2GDpf7GSjp2q-jeP8HmgjpZEmrKfxD69b3yTSOB4rKJ2NVp5nIplLodL_MoTXJsdnsShFibE73RFiQhAdewLkfOM79FIkgWKHNGI_kh1Y1pV_A7sa2VYkEdYcn3EWk8JfuKZy0ZUTBI0Lc9X6yWx4YxezAVODIMzL0fbd0o4Py6ZJ2k-3mP_P-WRoG7IrCA9dzfob1pGM4X-JI4PAawJzthXHC-cB3gk-VBYujl8ZBBpk6OMDLqHC1O4YHVU_6cnl1ez3n0PMBEQW0QdloVtRora9lWDrGCGX4PQYPDv4LKF4zKcoMPb60bFQmRNP4KmSk8taQDCk7R3e1lUiKREKgyPi7QBlN5j9I0WNHbDWI6GD7TgCSt9KwGJsf14OTLU4pfnac"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/updateUserRequest"
+                  },
+                  {
+                    "example": {
+                      "firstName": "Sanjeet",
+                      "lastName": "Kumar",
+                      "address": "New Delhi"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "firstName": "Sanjeet",
+                "lastName": "Kumar",
+                "address": "New Delhi"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/users/7": {
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "localhost:3001/api/users/7",
+        "operationId": "localhost:3001/api/users/7",
+        "parameters": [
+          {
+            "name": "auth-token",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string",
+              "example": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZmlyc3ROYW1lIjoic2FuamVldCIsImxhc3ROYW1lIjoia3VtYXIiLCJhZGRyZXNzIjoiTmV3IERlbGhpIiwicGhvbmUiOiI5OTk5OTk5OTk5IiwiZW1haWwiOiJzYW5qZWV0Lmt1bWFyQHRpY2tldG1hc3Rlci5jb20iLCJwYXNzd29yZCI6IjgxZGM5YmRiNTJkMDRkYzIwMDM2ZGJkODMxM2VkMDU1IiwiaWF0IjoxNjY1NDkyNDA1LCJleHAiOjE2NjU0OTQyMDV9.YaIRwTh-GQjHzQR_fR4uWqfZd-JtL2bMc1mVvPiFqPFP98X3Xj90FWL4CEOSp7xl3rVb_thDjJPb5Cv6s0uzJ7y74FbKkqAdAUFEvCc2BeSU6T46gXu9IelvlUevqIfzehrapG2BlbTnn3ePHyjm9isFNtP0sRqcxCPtkrJseARBJufKZT3pf6edyMiU0hak-6i4mO07Yrnuo1h0-4yxmX2ldLjXmRttH0xL1-p1W1iJIN-p3YnyBvV1w6zYYPauPTLWJTm3U4bJZA_spuPmBSVNmfHVE7cl7RjPdfNHOJsVq0Ij5hq0lR-e_UJ8_Q4mXoRwWu4O0OVcZtp8NeoiwHHhPnbjIwL3jX7AUKkO92gHws-lVFq1N9csDGysg1L4ge4VTShdDXsAxt_qdqUFQwt_ZzNfepeUzmuFukjIYBDILzwftzuZ3-koIkWUuIXY66lDEWwGj0bqOwHm0d8YIhvWe2ysSyOHATXQEo_sqo_pz8Tb-2PMic2Df9S41pHpIdr7LE--rf6B-7i6Mop0W0xHDa3lS7GliiVk_lTWR_g863ff0QH7cSTFjyGLH4wVXvOPvDjhmA3IE1laEPEG0xN4Fu6a9bMuTccPZz0ae8TZ0Z6m6swv3emv3h9WdH6e2xFETVYfY-d3QJ6dTcEd4sb43ERJ-NoMHqOfYNZc194"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "registerUserRequest": {
+        "title": "registerUserRequest",
+        "required": [
+          "firstName",
+          "lastName",
+          "address",
+          "phone",
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "firstName": "sanjeet",
+          "lastName": "kumar",
+          "address": "New Delhi",
+          "phone": "9999999999",
+          "email": "sanjeet.kumar@gmail.com",
+          "password": "1234"
+        }
+      },
+      "loginRequest": {
+        "title": "loginRequest",
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "sanjeet.kumar@gmail.com",
+          "password": "1234"
+        }
+      },
+      "updateUserRequest": {
+        "title": "updateUserRequest",
+        "required": [
+          "firstName",
+          "lastName",
+          "address"
+        ],
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "firstName": "Sanjeet",
+          "lastName": "Kumar",
+          "address": "New Delhi"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "User",
+      "description": ""
+    }
+  ]
+}
